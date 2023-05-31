@@ -1,0 +1,17 @@
+<div class = "template-contaniner">
+    <div class = "template-wrapper">
+        <form action="/submitform" method ="post">
+            <input type="text"> 
+            <textarea name="text" id="text-output" cols="30" rows="10"></textarea>
+            <button class="like-button" data-post-id="{{postId}}">
+                <i class="fas fa-thumbs-up"></i> {{likeCount}}
+            </button>
+            <button class="like-button" data-post-id="{{postId}}">
+                <i class="fas fa-thumbs-down"></i> {{likeCount}}
+            </button>
+
+
+        </form>
+
+    </div>
+</div>
