@@ -21,6 +21,15 @@ router.get("/dashboard", withAuth, async (req, res) => {
   }
 });
 
+// Template
+router.get("/template", withAuth, async (req, res) => {
+  try {
+    res.render("template", {logged_in: req.session.logged_in }); 
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/dashboard");
