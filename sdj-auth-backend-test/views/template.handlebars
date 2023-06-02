@@ -1,16 +1,15 @@
 <div class = "template-contaniner">
     <div class = "template-wrapper">
         <form action="/submitform" id ="template-submit"  method ="post">
-            <input type="text" id = "input"> 
-            <textarea name="text" id="text-output" cols="30" rows="10"></textarea>
+            <input type="text" id = "input"> <br>
+            <textarea name="text" id="text-output" cols="30" rows="10"></textarea> <br>
             <button class="like-button" name = "likebtn" data-post-id="{{postId}}">
                 <i class="fas fa-thumbs-up"></i> {{likeCount}}
             </button>
             <button class="like-button" name = "hatebtn" data-post-id="{{postId}}">
                 <i class="fas fa-thumbs-down"></i> {{likeCount}}
             </button>
-
-
+              
         </form>
 
     </div>

@@ -2,12 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    
 }
 
 .template-wrapper{
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+.template-wrapper input{
+  margin: 50px 0px 50px 0px;
+  height: 50px;
+  width: 390px;
+}
+.template-wrapper textarea{
+  height: 200px;
+  width: 390px;
+}
+.template-wrapper button{
+    margin: 50px 0px 50px 0px;
+}
+
+
