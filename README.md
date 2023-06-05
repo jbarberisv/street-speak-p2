@@ -1,13 +1,37 @@
+![alt text](https://img.shields.io/badge/License-GPLv2-brightgreen)
+![alt text](https://img.shields.io/badge/Ver.-1.0.0-blue)
 # street-speak-p2
 
 ## Description
 
 The Programming Dictionary is an interactive online platform that serves as a comprehensive resource for programmers, developers, and enthusiasts seeking to look up programming terms and their definitions. It not only provides an extensive collection of programming-related terminologies but also incorporates a unique voting system that encourages user participation and collaboration.
 
+## Screenshot
+
+![alt text](https://github.com/jbarberisv/street-speak-p2/blob/JoaquinBranch/assets/img/screen%20shot%20street.png?raw=true)
+
 ## Usage
 
+How to use the Programming Dictionary:
+
+-   Create an account.
+-   Access your dashboard.
+-   Search for an urban word.
+-   If the word doesn't exist, create a new definition.
+-   Collaborate and contribute to existing definitions.
+-   By creating an account, searching for terms, and contributing to the community, you can make the most of the Programming Dictionary.
 
 ## Installation
+
+-   Clone the repository
+-   Create a database in mysql suing CLI command 
+    `mysql -u root`
+    `source db/schema.sql`
+-   Seed the database:
+    `npm run seeds`
+-   Run the server:
+    `npm start`
+-   In your browser open http://localhost:3001
 
 
 ## Credits
