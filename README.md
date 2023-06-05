@@ -1,8 +1,14 @@
+![alt text](https://img.shields.io/badge/License-GPLv2-brightgreen)
+![alt text](https://img.shields.io/badge/Ver.-1.0.0-blue)
 # street-speak-p2
 
 ## Description
 
 The Programming Dictionary is an interactive online platform that serves as a comprehensive resource for programmers, developers, and enthusiasts seeking to look up programming terms and their definitions. It not only provides an extensive collection of programming-related terminologies but also incorporates a unique voting system that encourages user participation and collaboration.
+
+## Screenshot
+
+![alt text](https://github.com/jbarberisv/street-speak-p2/blob/JoaquinBranch/assets/img/screen%20shot%20street.png?raw=true)
 
 ## Usage
 
