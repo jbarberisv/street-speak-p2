@@ -25,53 +25,37 @@
 
 
 
-// const viewWords = async () => {
-//     try {
-//       const response = await fetch('api/words', {
-//         method: 'GET',
-//         headers: { 'Content-Type': 'application/json' },
-//       });
-  
-//       if (response.ok) {
-//         const data = await response.json();
-//         console.log(data);
-//       } else {
-//         alert('Failed to fetch data.');
-//       }
-//     } catch (err) {
-//       console.error(err);
-//       alert('An error occurred while fetching data.');
-//     }
-//   };
-  
-//   const viewbtn = document.getElementById("viewBtn");
-//   viewbtn.addEventListener('click', viewWords);
 
-//   const template = Handlebars.compile(sourceTemplate);
 
-// // Render the template with the data
-// const renderedHtml = template(data);
+const newCommentFormHandler = async (event) => {
+  event.preventDefault();
 
-const viewWords = async () => {
-  try {
-    const response = await fetch('api/words', {
-      method: 'GET',
+  const word_id = parseInt(window.location.pathname.split('/').pop());
+
+  const content = document.querySelector('#content-new-comment').value.trim();
+
+  if (content) {
+    const response = await fetch(`/api/comments`, {
+      method: 'POST',
+      body: JSON.stringify({ comment_text: content, word_id }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      const data = await response.json();
-      console.log(data);
-
-      const template = Handlebars.compile(sourceTemplate);
-      const renderedHtml = template({ words: data }); // Assuming the array is called "words" in the template
-      // Use the rendered HTML to update the DOM or perform other actions
+      document.location.reload(); 
     } else {
-      alert('Failed to fetch data.');
+      console.log('Response status:', response.status);
+      console.log('Response text:', await response.text());
+      alert('Failed to create a comment.'); 
     }
-  } catch (err) {
-    
-    alert('An error occurred while fetching data.');
   }
 };
+
+
+
+
+const newCommentForm = document.querySelector('.new-comment-form');
+if (newCommentForm) {
+  newCommentForm.addEventListener('submit', newCommentFormHandler);
+}
 
