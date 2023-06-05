@@ -6,22 +6,35 @@ const withAuth = require("../utils/auth");
 //--------------
 router.get("/", async (req, res) => {
   try {
-        // Find all posts with associated usernames
     const wordData = await Word.findAll({
       include: [{ model: User, attributes: ["username"] }],
     });
-    // Convert post data to plain JavaScript object
+
+    // Convert wordData to plain JavaScript object
     const words = wordData.map((word) => word.get({ plain: true }));
-    // Render homepage template with posts and login status
+
+    // Sort the words array alphabetically by the "title" property
+    words.sort((a, b) => {
+      const titleA = a.title.toLowerCase();
+      const titleB = b.title.toLowerCase();
+      if (titleA < titleB) {
+        return -1;
+      }
+      if (titleA > titleB) {
+        return 1;
+      }
+      return 0;
+    });
+
     res.render("homepage", {
       words,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-        // If there is an error, return 500 status code and error message
     res.status(500).json(err);
   }
 });
+
 
 //-----------------
 router.get("/words/:id", withAuth, async (req, res) => {
