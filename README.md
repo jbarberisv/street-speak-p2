@@ -6,8 +6,26 @@ The Programming Dictionary is an interactive online platform that serves as a co
 
 ## Usage
 
+How to use the Programming Dictionary:
+
+-Create an account.
+-Access your dashboard.
+-Search for an urban word.
+-If the word doesn't exist, create a new definition.
+-Collaborate and contribute to existing definitions.
+-By creating an account, searching for terms, and contributing to the community, you can make the most of the Programming Dictionary.
 
 ## Installation
+
+-Clone the repository
+-Create a database in mysql suing CLI command 
+    `mysql -u root`
+    `source db/schema.sql`
+-Seed the database:
+    `npm run seeds`
+-Run the server:
+    `npm start`
+-In your browser open http://localhost:3001
 
 
 ## Credits
