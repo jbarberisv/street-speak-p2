@@ -1,16 +1,16 @@
 *{
-  --primary:#6096B4;
-  --secondary:#93BFCF;
-  --text:#EEE9DA;
-  --random:#BDCDD6;
-  --bg:#27374D;
-
   --bg: #0D0A0B;
   --grey: #454955;
   --text: #F3EFF5;
   --secondary: #f9c909;
   --primary:#70c049;
   --random:#BDCDD6;
+}
+
+.homeBody
+{
+    background-color: #f9c90927;
+    background-image: url(http://www.transparenttextures.com/patterns/dark-brick-wall.png);
 }
 
 span
