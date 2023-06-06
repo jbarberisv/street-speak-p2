@@ -1,0 +1,55 @@
+<div class = "template-contaniner">
+    <div class = "template-wrapper">
+        <section  id ="template-submit">
+            {{!-- title --}}
+            <h1>{{title}}</h1> 
+            {{!-- definition --}}
+            <p>
+               {{description}}
+            </p> 
+            <button class="like-button" name = "likebtn" data-post-id="{{wordId}}">
+                <i class="fas fa-thumbs-up"></i> {{likeCount}}
+            </button>
+            <button class="like-button" name = "hatebtn" data-post-id="{{wordId}}">
+                <i class="fas fa-thumbs-down"></i> {{likeCount}}
+            </button>
+              
+        </section>
+       
+
+   
+
+
+  
+  <div>
+    
+  </div>  
+   
+ </div>  
+ <div>
+  {{#if logged_in}}
+    <form class="new-chess-comment-form" class="mb-3">
+      <div class="mb-3">
+        <label for="comment" class="form-label">Add Comment:</label>
+        <textarea
+          class="form-control"
+          id="content-new-chess-comment"
+          rows="3"
+          placeholder="Add a comment..."
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  {{/if}}
+ 
+  <h2>Comment History:</h2>
+     
+
+  {{#each comments}}
+    <div class="commentBox mb-3">
+      <p class="comment">{{comment_text}}</p>
+      <p>By {{user.username}} on {{format_date createdAt}}</p>
+    </div>
+  {{/each}}
+</div> 
+</div>
