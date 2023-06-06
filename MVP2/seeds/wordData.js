@@ -26,6 +26,32 @@ const wordData = [
     title: "Refactoritis",
     description: "Refactoritis is the compulsion to excessively refactor code without clear purpose, resulting in complex and unstable codebases.",
     user_id: 5,
+  },
+  {
+    title: "A.I",
+    description: "artificial intelligence",
+    user_id: 1,
+  },
+
+  {
+    title: "GIT",
+   description: "is a version control system used for tracking changes in computer files. It is generally used for source code management in software development.",
+    user_id: 2,
+  },
+  {
+    title: "Merge conflict",
+  description: " is an event that takes place when Git is unable to automatically resolve differences in code between two commits",
+    user_id: 3,
+  },
+  {
+    title: "OOP",
+   description: "Object-oriented programming is a computer programming model that organizes software design around data, or objects, rather than functions and logic",
+    user_id: 4,
+  },
+  {
+    title: "Typescript",
+    description: "is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript.",
+    user_id: 5,
   }
 ];
 
