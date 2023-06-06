@@ -94,6 +94,13 @@ router.get("/newword", withAuth, async (req, res) => {
   }
 });
 
+router.get("/contact_form", withAuth, async (req, res) => {
+  try {
+    res.render("contact_form", {logged_in: req.session.logged_in }); 
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // router.get("/template", withAuth, async (req, res) => {
 //   try {
