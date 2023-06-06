@@ -52,7 +52,29 @@ const wordData = [
     title: "Typescript",
     description: "is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript.",
     user_id: 5,
-  }
+  },
+  {
+    title: "API",
+    description: "(Application programming interface) A computer programming term meaning a series of rules. APIs allow an application to extract information from a service and use that information in their own application, or sometimes for data analysis.",
+    user_id: 6,
+  },
+  {
+    title: "Cookies/Tracking Cookies",
+    description: "A small file that a web server automatically sends to your personal computer when you browse certain websites.",
+    user_id: 3,
+  },
+  {
+    title: "Git Good",
+    description: "Somehting an opposing programmer would says, when you hit a merging conflict",
+    user_id: 1,
+  },
+  {
+    title: "Plugin/Plug-In",
+    description: "A software extension that adds a specific feature to an existing software application.",
+    user_id: 4,
+  },
+  
+
 ];
 
 const seedWord = () => Word.bulkCreate(wordData);

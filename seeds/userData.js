@@ -27,6 +27,11 @@ const userData = [
     email: "user5@example.com",
     password: "password5",
   },
+  {
+    username: "user6",
+    email: "user6@example.com",
+    password: "password6",
+  },
 
 ];
 // Function to seed posts table with dummy data using bulkCreate method
