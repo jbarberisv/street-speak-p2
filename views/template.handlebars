@@ -2,17 +2,17 @@
     <div class = "template-wrapper">
         <section  id ="template-submit">
             {{!-- title --}}
-            <h1>{{title}}</h1> 
+            <h1 class="text-black">{{title}}</h1> 
             {{!-- definition --}}
-            <p>
+            <p class="text-black">
                {{description}}
             </p> 
-            <button class="like-button" name = "likebtn" data-post-id="{{wordId}}">
+            {{!-- <button class="like-button" name = "likebtn" data-post-id="{{wordId}}">
                 <i class="fas fa-thumbs-up"></i> {{likeCount}}
             </button>
             <button class="like-button" name = "hatebtn" data-post-id="{{wordId}}">
                 <i class="fas fa-thumbs-down"></i> {{likeCount}}
-            </button>
+            </button> --}}
               
         </section>
        
@@ -48,7 +48,7 @@
   {{#each comments}}
     <div class="commentBox mb-3">
       <p class="comment">{{comment_text}}</p>
-      <p>By {{user.username}} on {{format_date createdAt}}</p>
+      <p class="userinfo">By {{user.username}} on {{format_date createdAt}}</p>
     </div>
   {{/each}}
 </div> 

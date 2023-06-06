@@ -1,17 +1,17 @@
 <main class="container mt-5">
   <div class="row">
     <div class="col-12">
-      <h1 class="mb-4">welcome</h1>
+      <h1 class="mb-4 text-black">Welcome</h1>
 
       <a href="/newword" class="btn btn-primary">Create a New word</a>
     </div>
   </div>
   <br>
-  <h1 class="mb-4"> Contributions:</h1>
+  <h1 class="mb-4 text-black"> Contributions:</h1>
   {{#each words}}
-    <div class="container mb-3">
-      <h2><a href="/words/{{id}}" class="text-decoration-none text-reset">{{title}}</a></h2>
-      <p>Created by: {{user.username}} | Date: {{format_date createdAt}}</p>
+    <div class="container mb-3 commitBox">
+      <h2 class="text-black"><a href="/words/{{id}}" class="text-decoration-none text-reset ">{{title}}</a></h2>
+      <p class="text-black">Created by: {{user.username}} | Date: {{format_date createdAt}}</p>
       <a href="/editword/{{id}}" class="btn btn-warning">Edit Post</a>
       <button class="btn btn-danger delete-post" data-post-id="{{id}}">Delete</button>
     </div>
