@@ -4,9 +4,24 @@
   --text:#EEE9DA;
   --random:#BDCDD6;
   --bg:#27374D;
+
+  --bg: #0D0A0B;
+  --grey: #454955;
+  --text: #F3EFF5;
+  --secondary: #f9c909;
+  --primary:#70c049;
+  --random:#BDCDD6;
 }
 
-
+span
+{
+    font-style: italic;
+    color: white;
+}
+.logo
+{
+    color: var(--secondary);
+}
 
 .template-contaniner{
   padding-left: 10px ;
@@ -74,9 +89,28 @@ body{
   background-color: var(--secondary);
   box-shadow: 4px 4px 8px 1px #00000075;
 }
+.navbar a{
+  text-decoration: none;
+  position: relative;
+  
+}
+.navbar a:after{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary);
+  transition: 0.5s;
+}
+.navbar a:hover:after{
+  width:100%;
+}
+
 .nav-item a{
   color: var(--text);
-  font-size: 2em;
+  font-size: 1.3rem;
 }
 
 .button{
@@ -87,6 +121,7 @@ body{
   box-shadow: 4px 4px 8px 1px #00000075;
 }
 .button:hover{
-  background-color: var(--random) ;
+  background-color: white;
+  color: black;
   
 }
