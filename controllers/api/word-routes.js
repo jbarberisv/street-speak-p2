@@ -41,4 +41,20 @@ router.get("/:id", async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  router.put("/:id", async (req, res) => {
+    try {
+      const updatedWord = await Word.update(req.body, {
+        where: { id: req.params.id },
+      });
+  
+      if (!updatedWord) {
+        res.status(404).json({ message: "No word found with that id!" });
+        return;
+      }
+      res.status(200).json(updatedWord);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 module.exports = router;

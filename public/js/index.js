@@ -1,79 +1,3 @@
-// const templateFormHandler = async function(event){
-//     event.preventDefault();
-//     const inputEl = document.querySelector("#input").value.trim();
-//     const textAreaEl = document.querySelector("#text-output").value.trim();
-//     const likeButtonEl = document.querySelector('button[name = "likebtn"]');
-//     const hateButtonEl = document.querySelector('button[name = "hatebtn"]');
-    
-//     if(body){
-//         await fetch("", {
-//             method:POST ,
-//             body:JSON.stringify({
-//                 inputEl, 
-//                 textAreaEl,
-//                 likeButtonEl,
-//                 hateButtonEl
-//             }),
-//             headers:{"Content-type":"appliation/json"},
-
-//         })
-//         document.location.reload();
-//     }
-// }
-// document.querySelector("#template-submit").addEventListener("submit", templateFormHandler)
-
-
-
-
-// const viewWords = async () => {
-//     try {
-//       const response = await fetch('api/words', {
-//         method: 'GET',
-//         headers: { 'Content-Type': 'application/json' },
-//       });
-  
-//       if (response.ok) {
-//         const data = await response.json();
-//         console.log(data);
-//       } else {
-//         alert('Failed to fetch data.');
-//       }
-//     } catch (err) {
-//       console.error(err);
-//       alert('An error occurred while fetching data.');
-//     }
-//   };
-  
-//   const viewbtn = document.getElementById("viewBtn");
-//   viewbtn.addEventListener('click', viewWords);
-
-//   const template = Handlebars.compile(sourceTemplate);
-
-// // Render the template with the data
-// const renderedHtml = template(data);
-
-const viewWords = async () => {
-  try {
-    const response = await fetch('api/words', {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data);
-
-      const template = Handlebars.compile(sourceTemplate);
-      const renderedHtml = template({ words: data }); // Assuming the array is called "words" in the template
-      // Use the rendered HTML to update the DOM or perform other actions
-    } else {
-      alert('Failed to fetch data.');
-    }
-  } catch (err) {
-    
-    alert('An error occurred while fetching data.');
-  }
-};
 
 const deletePostFormHandler = async (event) => {
   event.preventDefault();
@@ -85,16 +9,75 @@ const deletePostFormHandler = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard"); // When successful, load the dashboard page
+    document.location.replace("/dashboard"); 
   } else {
-    alert("Failed to delete a post."); // When unsuccessful, show alert
+    alert("Failed to delete a post."); 
   }
 };
 
-// Event listener
+
 const deletePostButtons = document.querySelectorAll(".delete-post");
 
 deletePostButtons.forEach((button) => {
   button.addEventListener("click", deletePostFormHandler);
 });
 
+//------------
+document.addEventListener("DOMContentLoaded", () => {
+
+  const word_id = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
+  ];
+
+
+  const updatePostFormHandler = async (event) => {
+    event.preventDefault();
+
+    const title = document.querySelector("#title-update-post").value.trim();
+    const content = document
+      .querySelector("#content-update-post")
+      .value.trim();
+
+    if (title && content) {
+      const response = await fetch(`/api/words/${word_id}`, {
+        method: "PUT",
+        body: JSON.stringify({ title, content }),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (response.ok) {
+        document.location.replace("/dashboard"); 
+      } else {
+        alert("Failed to update a post."); 
+      }
+    }
+  };
+
+
+  const deletePostFormHandler = async (event) => {
+    event.preventDefault();
+
+    const response = await fetch(`/api/words/${word_id}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      document.location.replace("/dashboard"); 
+    } else {
+      alert("Failed to delete a post."); 
+    }
+  };
+
+
+  const updatePostButton = document.querySelector("#update-post");
+
+  if (updatePostButton) {
+    updatePostButton.addEventListener("click", updatePostFormHandler);
+  }
+
+  const deletePostButton = document.querySelector("#delete-post");
+
+  if (deletePostButton) {
+    deletePostButton.addEventListener("click", deletePostFormHandler);
+  }
+});
