@@ -15,7 +15,8 @@
   --primary: #f9c909;
   --green:#70c049;
   --random:#BDCDD6;
-  
+  --box:aliceblue;
+  --linen: rgb(248, 222, 197);
 }
 
 .homeBody
@@ -38,7 +39,7 @@ span
   padding-right: 10px;
   margin-top: 20rem;
   box-sizing: border-box;
-  background-color: var(--primary);
+  background-color: var(--linen);
   width: 50rem;
   height: 100%;
   display: flex;
@@ -79,18 +80,30 @@ span
 }
 
 .commentBox{
-  background-color: var(--primary);
+  background-color: var(--box);
   border: 2px solid var(--random);
   margin-bottom: 20px;
   padding: 10px;
+ 
+}
+.commitBox{
+  background-color: var(--box);
+  border: 2px solid var(--random);
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 4px 4px 8px 1px #00000075;
 }
 
 .comment{
   font-size: 15px;
-  color: var(--text);
+  color: var(--secondary);
 }
-
-
+.userinfo{
+  color: var(--secondary);
+}
+.custom{
+  background-color: var(--linen);
+}
 /* main */
 body{
   background-color: var(--bg);

@@ -2,19 +2,19 @@ const { Comment } = require("../models");
 
 const commentData = [
   {
-    comment_text: "WHOOP WHOOP",
+    comment_text: "who else struggled with this ",
     user_id: 1,
-    word_id: 1,
+    word_id: 8,
   },
   {
-    comment_text: "Who else hates these",
+    comment_text: "this is my biggest weakness haha",
     user_id: 2,
-    word_id: 2,
+    word_id: 4,
   },
   {
-    comment_text: "check out this video for a more detailed example https://www.youtube.com/watch?v=HsdmP7c1gkQ",
+    comment_text: " Why did the developer refuse to attend the dance party Because they were afraid of merge conflicts on the dance floor! ",
     user_id: 3,
-    word_id: 3,
+    word_id: 8,
   },
   {
     comment_text: "I prefer fettuccine code anyone else?",
@@ -24,17 +24,17 @@ const commentData = [
   {
     comment_text: "who else had this on their first challenge ",
     user_id: 5,
-    word_id: 5,
+    word_id: 4,
   },
   {
-    comment_text: "if dotenv cant find the file use this require('dotenv').config({ path: `${__dirname}/../.env` });",
+    comment_text: "https://drkellierose.files.wordpress.com/2016/03/michellepastaa.gif?w=442&h=332&zoom=2",
     user_id: 2,
-    word_id: 1,
+    word_id: 4,
   },
   {
-    comment_text: "Refactoritis is a psychological compulsion in software development. Excessive code refactoring without clear purpose, leading to complex and unstable codebases.",
+    comment_text: "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github",
     user_id: 2,
-    word_id: 5,
+    word_id: 8,
   }
 ];
 
