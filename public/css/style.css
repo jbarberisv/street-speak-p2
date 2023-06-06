@@ -1,4 +1,5 @@
 *{
+  /*
   --primary:#6096B4;
   --secondary:#93BFCF;
   --text:#EEE9DA;
@@ -6,7 +7,30 @@
   --bg:#27374D;
 
   --yellow: #FFE7A0;
-  --yellow2:#FFF5B8
+  --yellow2:#FFF5B8;
+*/
+  --secondary: #0D0A0B;
+  --grey: #454955;
+  --text: #F3EFF5;
+  --primary: #f9c909;
+  --green:#70c049;
+  --random:#BDCDD6;
+  
+}
+
+.homeBody
+{
+    background-color: #f9c90927;
+    background-image: url(http://www.transparenttextures.com/patterns/dark-brick-wall.png);
+}
+span
+{
+    font-style: italic;
+    color: white;
+}
+.logo
+{
+    color: var(--primary);
 }
 
 .template-contaniner{
@@ -78,6 +102,25 @@ body{
 .nav-item a{
   color: var(--text);
   font-size: 2em;
+}
+
+.navbar a{
+  text-decoration: none;
+  position: relative;
+  
+}
+.navbar a:after{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary);
+  transition: 0.5s;
+}
+.navbar a:hover:after{
+  width:100%;
 }
 
 .button{
