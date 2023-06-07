@@ -33,6 +33,10 @@ How to use the Programming Dictionary:
     `npm start`
 -   In your browser open http://localhost:3001
 
+## Deployment
+
+[click here](https://mvp-ucf-app.herokuapp.com) 
+
 
 ## Credits
 
